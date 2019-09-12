@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form Webhose</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+
+  <script>
+
+  </script>
+</head>
+<body>
+    <!-- Success message -->
+    <form id="contact" name="FormName" action="index.html" method="post">
+        <label for="email">Email:</label>
+        <input  type="email" id="email" name="email" required>
+        <span id='result_email'></span>
+        
+        <label for="domain">Domain Name:</label>
+        <input type="url" id="domain" name="domain" required>
+        <span id='result_domain'></span>
+
+        <label for="Source_type">Source type:</label>
+        <select id="Source_type">
+            <option value="News">News</option>
+            <option value="blog">blog</option>
+            <option value="Discussions">Discussions</option>
+            <option value="Reviews">Reviews</option>
+        </select>
+  
+        <label for="country">Source Country:</label>
+        <select id="country" name="country">
+        </select>
+
+        <label for="reason">Reason:</label>
+        <textarea type="text" id="reason" name="reason"></textarea>
+        
+        
+        <div data-toggle="modal" data-target="#myModal" id="submit">Submit</div>
+    </form>
+
+    
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog"> 
+            <div class="container">
+                <div class="table-wrapper">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Email:</th>
+                                <th>Domain Name:</th>
+                                <th>Source type:</th>
+                                <th>Source Country:</th>
+                                <th>Reason:</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                            <tr style="display:none">
+                                <td>
+                                    <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                </td>
+                            </tr>      
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+    </div> 
+</body>
+</html>                            
